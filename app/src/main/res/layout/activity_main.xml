@@ -7,25 +7,25 @@
     tools:context="e.giuseppemonetti.contatore.MainActivity">
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:text="@string/add"
-        app:layout_constraintEnd_toStartOf="@+id/buttonReduce"
+        app:layout_constraintEnd_toStartOf="@+id/btnReduce"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/chkRaddoppia" />
 
     <Button
-        android:id="@+id/buttonReduce"
+        android:id="@+id/btnReduce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reduce"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonAdd"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonAdd" />
+        app:layout_constraintStart_toEndOf="@+id/btnAdd" />
 
     <TextView
         android:id="@+id/textMessage"
@@ -41,4 +41,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAzzera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReduce" />
+
+    <CheckBox
+        android:id="@+id/chkRaddoppia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/raddoppia"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMessage" />
 </android.support.constraint.ConstraintLayout>

@@ -6,4 +6,6 @@
     <string name="contMex1">Ho contato</string>
     <string name="contMex2">volte</string>
     <string name="contMexSingolare">volta</string>
+    <string name="zero">Azzera</string>
+    <string name="raddoppia">Raddoppia</string>
 </resources>

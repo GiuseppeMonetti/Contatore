@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView vMessage;
     private Button vAdd;
     private Button vReduce;
+    private Button vAzzera;
+    private CheckBox vRaddoppia;
 
 
     private int cont = 100;
@@ -24,13 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
         //RIFERIMENTI LAYOUT
         vMessage = findViewById(R.id.textMessage);
-        vAdd = findViewById(R.id.buttonAdd);
-        vReduce = findViewById(R.id.buttonReduce);
+        vAdd = findViewById(R.id.btnAdd);
+        vReduce = findViewById(R.id.btnReduce);
+        vAzzera = findViewById(R.id.btnAzzera);
+        vRaddoppia = findViewById(R.id.chkRaddoppia);
 
         //BUTTON ACTION
         vAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (vRaddoppia.isChecked())
+                    ++cont;
                 ++cont;
                 visualizzaMex();
             }
@@ -38,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
         vReduce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(vRaddoppia.isChecked())
+                    --cont;
                 --cont;
+                visualizzaMex();
+            }
+        });
+        vAzzera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cont = 0;
                 visualizzaMex();
             }
         });
