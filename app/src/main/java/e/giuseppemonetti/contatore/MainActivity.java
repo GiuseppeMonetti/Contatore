@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button vReduce;
 
 
-    private int cont = 0;
+    private int cont = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
