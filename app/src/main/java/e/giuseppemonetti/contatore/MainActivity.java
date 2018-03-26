@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         //RIFERIMENTI LAYOUT
         vMessage = findViewById(R.id.textMessage);
-        vAdd = findViewById(R.id.buttonAdd);
-        vReduce = findViewById(R.id.buttonReduce);
+        vAdd = findViewById(R.id.btnAdd);
+        vReduce = findViewById(R.id.btnReduce);
 
         //BUTTON ACTION
         vAdd.setOnClickListener(new View.OnClickListener() {
