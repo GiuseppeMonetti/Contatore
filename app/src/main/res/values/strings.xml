@@ -3,4 +3,7 @@
     <string name="add">Aggiungi</string>
     <string name="reduce">Riduci</string>
     <string name="message">Premi i tasti per contare!</string>
+    <string name="contMex1">Ho contato</string>
+    <string name="contMex2">volte</string>
+    <string name="contMexSingolare">volta</string>
 </resources>
