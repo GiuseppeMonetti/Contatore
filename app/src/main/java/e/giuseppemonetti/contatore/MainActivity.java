@@ -2,6 +2,7 @@ package e.giuseppemonetti.contatore;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private Button vReduce;
     private Button vAzzera;
     private CheckBox vRaddoppia;
+    private final String TAG = "PRINCIPALE";
 
 
-    private int cont = 100;
+    private int cont = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 if (vRaddoppia.isChecked())
                     ++cont;
                 ++cont;
+                Log.v(TAG,"cont " + cont);
                 visualizzaMex();
             }
         });
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 if(vRaddoppia.isChecked())
                     --cont;
                 --cont;
+                Log.v(TAG,"cont " + cont);
                 visualizzaMex();
             }
         });
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cont = 0;
+                Log.v(TAG,"cont " + cont);
                 visualizzaMex();
             }
         });
